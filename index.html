@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surendra Kumawat — Data Analyst Resume</title>
+  <meta name="description" content="Resume website of Surendra Kumawat — Data Analyst | Python • SQL • Power BI • Excel • Tableau • R" />
+  <meta property="og:title" content="Surendra Kumawat — Data Analyst Resume" />
+  <meta property="og:description" content="Projects, experience, and contact details." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --accent: #22d3ee;
+      --accent-2: #60a5fa;
+      --ring: rgba(96,165,250,0.35);
+      --card: #0b1220;
+    }
+    :root.light {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --muted: #475569;
+      --text: #0f172a;
+      --accent: #0ea5e9;
+      --accent-2: #6366f1;
+      --ring: rgba(14,165,233,0.25);
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,0.12), transparent 60%),
+                  radial-gradient(1000px 500px at -10% 10%, rgba(99,102,241,0.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(140%) blur(8px);
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      border-bottom: 1px solid rgba(148,163,184,0.15);
+      z-index: 40;
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 14px 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .nav .brand { font-weight: 800; letter-spacing: .3px; font-size: 18px; }
+    .nav .actions { display: flex; gap: 10px; align-items: center; }
+    .btn {
+      border: 1px solid rgba(148,163,184,0.25);
+      background: linear-gradient(180deg, color-mix(in srgb, var(--panel) 88%, transparent), var(--panel));
+      color: var(--text); padding: 10px 14px; border-radius: 12px; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 6px 22px -12px var(--ring);
+    }
+    .btn:hover { border-color: color-mix(in srgb, var(--accent-2) 35%, rgba(148,163,184,0.25)); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border: none; }
+
+    .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 26px; align-items: center; padding-top: 24px; }
+    .card {
+      background: var(--panel); border: 1px solid rgba(148,163,184,0.15); border-radius: 18px;
+      padding: 22px; box-shadow: 0 2px 0 rgba(255,255,255,0.02) inset, 0 20px 60px -30px var(--ring);
+    }
+    .badge { display: inline-flex; gap: 8px; align-items: center; background: rgba(148,163,184,0.12); color: var(--text);
+      border: 1px solid rgba(148,163,184,0.25); padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 12px; }
+    .title { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.15; margin: 10px 0 8px; font-weight: 800; }
+    .subtitle { color: var(--muted); font-size: 16px; }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 20px; letter-spacing: .2px; }
+
+    .list { display: grid; gap: 12px; }
+    .item { background: var(--card); border: 1px solid rgba(148,163,184,0.15); border-radius: 16px; padding: 16px; }
+    .item h3 { margin: 0 0 6px; font-size: 16px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .chip { padding: 6px 10px; border-radius: 999px; background: rgba(2,132,199,0.12); border: 1px solid rgba(2,132,199,0.25); font-size: 12px; font-weight: 600; }
+
+    footer { margin: 28px 0; text-align: center; color: var(--muted); font-size: 14px; }
+
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .kpi { text-align: center; padding: 14px; border-radius: 16px; border: 1px dashed rgba(148,163,184,0.3); background: rgba(148,163,184,0.06); }
+    .kpi strong { display: block; font-size: 20px; }
+
+    .avatar {
+      aspect-ratio: 1/1; border-radius: 18px; border: 1px solid rgba(148,163,184,0.2);
+      background: linear-gradient(135deg, rgba(34,211,238,0.15), rgba(99,102,241,0.15));
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 56px; color: var(--text);
+    }
+
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .print-hide { display: initial; }
+    @media print {
+      header, .print-hide { display: none !important; }
+      body { background: #fff; }
+      .card, .item { break-inside: avoid; }
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid.cols-3 { grid-template-columns: 1fr; }
+      .grid.cols-2 { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">Surendra Kumawat</div>
+      <div class="actions">
+        <a class="btn" href="#projects" aria-label="Skip to projects">Projects</a>
+        <a class="btn" href="#experience" aria-label="Skip to experience">Experience</a>
+        <a class="btn" href="#contact" aria-label="Skip to contact">Contact</a>
+        <button class="btn" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark">🌗</button>
+        
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="card">
+        <span class="badge">Open to Work • Data Analyst</span>
+        <h1 class="title">Turning data into clear decisions</h1>
+        <p class="subtitle">Data Analyst with <strong>Python, SQL, Power BI, Excel, Tableau, and R</strong>. Passionate about dashboards, automation, and end‑to‑end analytics. MCA student and co‑founder at <strong>IHA089</strong>.</p>
+        <div class="section" style="margin-top:16px">
+          <div class="links">
+            <a class="btn" href="mailto:surendrakumawatnwh@gmail.com">📧 Email</a>
+            <a class="btn" href="https://github.com/Surendra089" target="_blank" rel="noopener">💻 GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/surendra089" target="_blank" rel="noopener">🔗 LinkedIn</a>
+            <a class="btn" href="https://instagram.com/codeandcrush" target="_blank" rel="noopener">🎥 @codeandcrush</a>
+            <a class="btn" href="#contact">📍 India</a>
+          </div>
+        </div>
+        <div class="section" style="margin-top:18px">
+          <div class="kpis">
+            <div class="kpi"><strong>3K+</strong> IG followers</div>
+            <div class="kpi"><strong>1.5M+</strong> Reel views</div>
+            <div class="kpi"><strong>8+</strong> Impactful projects</div>
+            <div class="kpi"><strong>5+</strong> Tools mastered</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="avatar" aria-label="Profile photo">
+            <img src="avtr.jpeg" alt="Surendra Kumawat" loading="lazy">
+          </div>
+
+        <div class="section">
+          <h2>Core Skills</h2>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Excel (Advanced)</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">R</span>
+            <span class="chip">ETL & Data Cleaning</span>
+            <span class="chip">Dashboarding</span>
+            <span class="chip">Statistics</span>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Certs & Highlights</h2>
+          <ul class="list">
+            <li class="item">
+              <h3>HackerRank — Python Gold (Benz badge)</h3>
+              <div class="meta">LeetCode & HackerRank regular</div>
+            </li>
+            <li class="item">
+              <h3>MCA — Ongoing</h3>
+              <div class="meta">Master of Computer Applications</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid cols-3">
+        <article class="item">
+          <h3>Walmart Sales Analytics (SQL + Power BI)</h3>
+          <p>End‑to‑end pipeline: data cleaning, SQL modeling, DAX measures, interactive dashboard with sales trends, top categories, and regional performance.</p>
+          <div class="meta">
+            <span>Power BI</span><span>SQL</span><span>Data Modeling</span>
+          </div>
+          <div class="chips">
+            <span class="chip">DAX</span>
+            <span class="chip">Star Schema</span>
+            <span class="chip">KPIs</span>
+          </div>
+          <p> <a href="#" target="_blank" rel="noopener">Full Report</a></p>
+        </article>
+        <article class="item">
+          <h3>Fake News Detection (Python)</h3>
+          <p>Built a text classification model using TF‑IDF + Logistic Regression; evaluated with precision/recall and deployed with a simple Flask UI.</p></br>
+          <div class="meta"><span>Python</span><span>Scikit‑learn</span><span>NLP</span></div>
+          <div class="chips">
+            <span class="chip">TF‑IDF</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Confusion Matrix</span>
+          </div>
+          <p> <a href="#" target="_blank" rel="noopener">Full Report</a></p>
+        </article>
+        <article class="item">
+          <h3>Car Price Prediction (ML)</h3>
+          <p>Regression pipeline with feature engineering and cross‑validation; exported model via pickle and visualized results in a slick Streamlit app.</p>
+          <div class="meta"><span>Pandas</span><span>Scikit‑learn</span><span>Streamlit</span></div>
+          <div class="chips">
+            <span class="chip">RMSE</span>
+            <span class="chip">Feature Engg</span>
+            <span class="chip">EDA</span>
+          </div>
+          <p> <a href="https://github.com/Surendra089/CarDekho-Price-Prediction" target="_blank" rel="noopener">Full Report</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="list">
+        <article class="item">
+          <h3>Co‑Founder — IHA089 (Cybersecurity & Dev Services)</h3>
+          <div class="meta">
+            <span>2024 — Present</span>
+            <span>India</span>
+          </div>
+          <p>Helping clients with analytics dashboards, basic app & web solutions, and security best practices. Built internal templates to speed up delivery.</p>
+          <div class="chips">
+            <span class="chip">Client Dashboards</span>
+            <span class="chip">Automation</span>
+            <span class="chip">Team Ops</span>
+          </div>
+        </article>
+        <article class="item">
+          <h3>Creator — @codeandcrush</h3>
+          <div class="meta"><span>2024 — Present</span><span>Instagram</span></div>
+          <p>Share quick tips on Python, SQL, and BI tools. Grew to 3K+ followers with a reel crossing 1.5M+ views.</p>
+          <div class="chips">
+            <span class="chip">Content Strategy</span>
+            <span class="chip">Short‑form Ed</span>
+            <span class="chip">Community</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <article class="item">
+          <h3>MCA — Master of Computer Applications</h3>
+          <div class="meta"><span>2023 — 2025</span><span>India</span></div>
+          <p>Focus: Data Analytics, Databases, Operating Systems, Java, and full‑stack fundamentals.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Toolbox -->
+    <section class="section">
+      <h2>Toolbox</h2>
+      <div class="grid cols-3">
+        <div class="item"><h3>Languages</h3><p>Python, SQL, R</p></div>
+        <div class="item"><h3>BI & Viz</h3><p>Power BI, Tableau, Excel (Power Query, Pivot, V/HLOOKUP)</p></div>
+        <div class="item"><h3>Data</h3><p>Pandas, NumPy, Scikit‑learn, DAX, ETL</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <div class="item">
+          <h3>Let’s work together</h3>
+          <p>Email: <a href="mailto:surendrakumawatnwh@gmail.com">surendrakumawatnwh@gmail.com</a></p>
+          <p>Phone/WhatsApp: <a href="tel:+916375986775">+91 6375986775</a></p>
+          <p>Location: India (IST)</p>
+          <div class="links" style="margin-top:8px">
+            <a class="btn" href="https://github.com/Surendra089" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/surendra089" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://instagram.com/codeandcrush" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <form class="item" onsubmit="event.preventDefault(); alert('Thanks! I will get back to you.'); this.reset();">
+          <h3>Quick Message</h3>
+          <label>Name<br><input required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,0.35);background:transparent;color:var(--text)"></label>
+          <br><br>
+          <label>Email<br><input type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,0.35);background:transparent;color:var(--text)"></label>
+          <br><br>
+          <label>Message<br><textarea required rows="4" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,0.35);background:transparent;color:var(--text)"></textarea></label>
+          <br><br>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © <span id="year"></span> Surendra Kumawat •  Hosted on GitHub 
+    </footer>
+  </main>
+
+  <script>
+    // Theme toggle with localStorage
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') root.classList.add('light');
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
